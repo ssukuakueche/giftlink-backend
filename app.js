@@ -8,16 +8,16 @@ app.use(cors())
 
 const router = new Router()
 
-router.get('/gifts', (req, res)=>{
-    const gifts = getGifts()
+router.get('/gifts', async (req, res)=>{
+    const gifts = await getGifts()
     return res.json(gifts)
 });
 
 router
 
-router.get('/gifts/:id', (req, res)=>{
+router.get('/gifts/:id', async (req, res)=>{
     const id = req.params.id;
-    const data = getGift(id);
+    const data = await getGift(id);
     res.json(data);
 })
 
@@ -26,4 +26,3 @@ app.use('/api', router);
 app.listen(3000, ()=>{
     console.log('Server is running 3000...')
 })
-sukuakueches@gmail.com

@@ -1,13 +1,13 @@
 import { db } from '../db'
 
-function getGifts()
+async function getGifts()
 {
-
+   return  (await db.collection('gifts').find({})).toArray();
 }
 
-function getGift(id)
+async function getGift(id)
 {
-
+    return (await db.collection('gifts').find({ _id : id}));
 }
 
 export default {
