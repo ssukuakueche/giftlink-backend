@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import express, { Router } from 'express'
 import { getGifts, getGift } from './services/gifts.service.js'
 import {connectDb} from './db.js'
