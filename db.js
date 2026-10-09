@@ -13,6 +13,7 @@ async function connectDb()
         await client.connect();
         db = client.db(MONGO_DB);
         console.log('Conexao com a DB foi um sucesso!');
+        return db;
     }
     catch (ex)
     {
