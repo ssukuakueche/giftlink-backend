@@ -9,7 +9,15 @@ let db;
 function connectDb()
 {
     client.connect();
-    db = client.db(MONGO_DB);
+    try 
+    {
+        db = client.db(MONGO_DB);
+        console.log('Conexao com a DB foi um sucesso!');
+    }
+    catch (ex)
+    {
+        console.log('Problema ao conectar na DB!');
+    }
 }
 
 export default {
