@@ -6,11 +6,11 @@ const MONGO_DB = 'giftlink';
 const client = new MongoClient(MONGO_URL);
 
 let db;
-function connectDb()
+async function connectDb()
 {
-    client.connect();
     try 
     {
+        await client.connect();
         db = client.db(MONGO_DB);
         console.log('Conexao com a DB foi um sucesso!');
     }
