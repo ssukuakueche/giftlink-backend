@@ -9,8 +9,12 @@ async function getGift(id)
 {
     return (await db.collection('gifts').findOne({ id : id}));
 }
+async function getGiftsByFilters(filters) {
+    return (await db.collection('gifts').find(filters));
+}
 
 export  {
     getGifts,
-    getGift
+    getGift, 
+    getGiftsByFilters
 }
