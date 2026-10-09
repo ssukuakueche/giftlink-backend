@@ -1,11 +1,13 @@
 import express, { Router } from 'express'
-import { getGifts, getGift } from 'services/gifts.service'
+import { getGifts, getGift } from './services/gifts.service.js'
+import {connectDb} from './db.js'
 import cors from 'cors'
 
 const app = express()
 app.use(express.json())
 app.use(cors())
 
+connectDb();
 const router = new Router()
 
 router.get('/gifts', async (req, res)=>{

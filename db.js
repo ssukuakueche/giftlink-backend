@@ -20,7 +20,7 @@ function connectDb()
     }
 }
 
-export default {
+export  {
     db,
     connectDb
 }

@@ -1,4 +1,4 @@
-import { db } from '../db'
+import { db } from '../db.js'
 
 async function getGifts()
 {
@@ -10,7 +10,7 @@ async function getGift(id)
     return (await db.collection('gifts').find({ _id : id}));
 }
 
-export default {
+export  {
     getGifts,
     getGift
 }
