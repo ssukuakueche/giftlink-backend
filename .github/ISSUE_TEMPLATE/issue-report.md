@@ -1,5 +1,5 @@
 ---
-name: Bug report
+name: Issue report
 about: Use this template to define tasks, outline requirements, and describe the expected
   outcome.
 title: ''
