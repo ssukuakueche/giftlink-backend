@@ -7,7 +7,7 @@ async function getGifts()
 
 async function getGift(id)
 {
-    return (await db.collection('gifts').find({ _id : id}));
+    return (await db.collection('gifts').findOne({ _id : id}));
 }
 
 export  {
