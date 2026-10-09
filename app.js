@@ -10,6 +10,12 @@ app.use(cors())
 connectDb();
 const router = new Router()
 
+app.get('', (req, res)=>{
+    res.json({
+        message: 'Server is running...'
+    })
+})
+
 router.get('/gifts', async (req, res)=>{
     const gifts = await getGifts()
     return res.json(gifts)
